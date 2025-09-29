@@ -1,3 +1,4 @@
+// Hà Thế Kiệt - 22633791
 import mongoose from "mongoose";  // Importing mongoose for MongoDB interactions
 import User from "../models/userModel.js";  // Importing User model
 import bcrypt from "bcrypt";  // Importing bcrypt for password hashing
@@ -63,7 +64,7 @@ export  class UserPostController {
             return res.status(400).render("signup",{message:"User already exists"});
         }
         const hashedPassword = await bcrypt.hash(password, 10);
-        const newUser = new User({ username, email,password:hashedPassword });
+        const newUser = new User({ username, email,password:hashedPassword,cpassword:hashedPassword });
         try {
             await newUser.save();
             res.status(201).render("signin",{message:"User created successfully"});
@@ -148,7 +149,7 @@ export  class UserPostController {
     changePassword = async (req, res) => {
         const { oldPassword, newPassword } = req.body;
         try {
-            const email = req.session.userEmail;
+            const email = req.session.userEmail || req.body.email;
             const existingUser = await User.findOne({ email: email });
             if (!existingUser) 
                 return res.status(404).render("change-password",{message:"User doesn't exist"});

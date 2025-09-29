@@ -1,3 +1,4 @@
+// Hà Thế Kiệt - 22633791
 import mongoose from 'mongoose';  // Importing mongoose for MongoDB interactions
 
 // Defining the schema for the User model

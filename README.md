@@ -1,3 +1,29 @@
+1. Signup
+![Post-Signup](public/results/signup.png)
+![GET-Signup](public/results/get-signup.png)
+![Signup_db](public/results/Signup_db.png)
+
+2. Signin
+![Post-Signin](public/results/signin.png)
+![Get-Signin](public/results/get-signin.png)
+
+3. Home Page
+![Home-Page](public/results/home-page.png)
+
+4. Signout
+![Signout](public/results/signout.png)
+
+5. Forgot Password
+![Get-Forgot-Password](public/results/get-forgot-password.png)
+![Post-Forgot-Password](public/results/post-forgot-password.png)
+
+6. Change Password
+![Get-Change-Password](public/results/get-change-password.png)
+![Post-Change-Password](public/results/post-change-password.png)
+
+7. Google Authentication
+![Google-Authentication](public/results/google-authentication.png)
+================================================================
 # Node.js Authentication System
 
 This project contains a complete authentication system using Node.js, Express, and MongoDB. It includes features like sign up, sign in, sign out, password reset, and social authentication (Google). The project is structured to be scalable with separate components for models, controllers, and routes.
